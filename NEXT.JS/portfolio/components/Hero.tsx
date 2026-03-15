@@ -12,9 +12,11 @@ const Hero = () => {
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{
           backgroundSize: "40px 40px",
-          backgroundImage: "linear-gradient(to right, #262626 1px, transparent 1px), linear-gradient(to bottom, #262626 1px, transparent 1px)",
+          backgroundImage:
+            "linear-gradient(to right, #262626 1px, transparent 1px), linear-gradient(to bottom, #262626 1px, transparent 1px)",
           mask: "radial-gradient(ellipse at center, transparent 20%, black)",
-          WebkitMask: "radial-gradient(ellipse at center, transparent 20%, black)",
+          WebkitMask:
+            "radial-gradient(ellipse at center, transparent 20%, black)",
         }}
       />
 
@@ -28,10 +30,7 @@ const Hero = () => {
           className="top-10 left-full h-[80vh] w-[50vw]"
           fill="purple"
         />
-        <Spotlight
-          className="top-20 -left-80 h-[80vh] w-[50vw]"
-          fill="blue"
-        />
+        <Spotlight className="top-20 -left-80 h-[80vh] w-[50vw]" fill="blue" />
       </div>
 
       {/* Content */}
