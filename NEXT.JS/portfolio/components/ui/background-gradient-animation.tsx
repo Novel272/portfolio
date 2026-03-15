@@ -70,16 +70,29 @@ export const BackgroundGradientAnimation = ({
   ]);
 
   useEffect(() => {
+    let animationFrameId: number;
+
     function move() {
       if (!interactiveRef.current) {
         return;
       }
-      setCurX((prevX) => prevX + (tgX - prevX) / 20);
-      setCurY((prevY) => prevY + (tgY - prevY) / 20);
-      interactiveRef.current.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+      setCurX((prevX) => {
+        const newX = prevX + (tgX - prevX) / 20;
+        setCurY((prevY) => {
+          const newY = prevY + (tgY - prevY) / 20;
+          if (interactiveRef.current) {
+            interactiveRef.current.style.transform = `translate(${Math.round(newX)}px, ${Math.round(newY)}px)`;
+          }
+          return newY;
+        });
+        return newX;
+      });
+      animationFrameId = requestAnimationFrame(move);
     }
-    move();
-  }, [tgX, tgY, curX, curY]);
+
+    animationFrameId = requestAnimationFrame(move);
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [tgX, tgY]);
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     if (interactiveRef.current) {
@@ -96,7 +109,7 @@ export const BackgroundGradientAnimation = ({
   return (
     <div
       className={cn(
-        "h-screen w-screen relative overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
+        "h-full w-full relative overflow-hidden bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
         containerClassName,
       )}
     >
