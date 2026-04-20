@@ -50,8 +50,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["React.JS", "Typescript"];
-  const rightLists = ["TailWind", "Next.JS"];
+  const leftLists = ["React.JS", "Typescript", "TailWind"];
+  const rightLists = ["Next.JS", "Three.js", "Motion"];
 
   const [copied, setCopied] = useState(false);
 
@@ -88,7 +88,7 @@ export const BentoGridItem = ({
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
-      <div className={`${id === 6 && "flex justify-center"} h-full`}>
+      <div className={cn(id === 6 && "flex justify-center", "h-full")}>
         <div className="w-full h-full absolute">
           {img && (
             <Image
@@ -102,9 +102,10 @@ export const BentoGridItem = ({
           )}
         </div>
         <div
-          className={`absolute right-0 -bottom-5 ${
+          className={cn(
+            "absolute right-0 -bottom-5",
             id === 5 && "w-full opacity-80"
-          } `}
+          )}
         >
           {spareImg && (
             <Image
@@ -122,7 +123,7 @@ export const BentoGridItem = ({
         <div
           className={cn(
             titleClassName,
-            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10",
+            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
         >
           <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
