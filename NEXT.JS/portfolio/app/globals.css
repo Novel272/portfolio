@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@config "../tailwind.config.ts";
 
 /* Use utility classes directly in your HTML/JSX. If you need to add custom base styles, do so here. */
 
