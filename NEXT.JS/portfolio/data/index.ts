@@ -91,33 +91,21 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Working with mohammed on our online sticker shop was a fantastic experience. He understood our vision, delivered a beautiful site, and made the whole process smooth and enjoyable. Our sales have grown thanks to his attention to detail and creative ideas. Highly recommended!",
+    name: "Sara Lee",
+    title: "Owner of Stickify Shop",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Mohammed built a wonderful website for my handmade pottery business. He was patient, responsive, and brought my ideas to life with a modern touch. Customers love the new look, and I appreciate his dedication to quality work.",
+    name: "Tomás Rivera",
+    title: "Founder of ClayCrafted",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "I needed a simple, effective site for my local dog-walking service, and mohammed delivered exactly what I hoped for. The site is easy to use, looks great, and has helped me reach more clients. Mohammed's professionalism made all the difference!",
+    name: "Emily Chen",
+    title: "Owner of PawsOnTheGo",
   },
 ];
 
@@ -164,8 +152,8 @@ export const workExperience = [
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+    title: "Lead Frontend & UX Engineer",
+    desc: "Led the frontend and user experience engineering for an innovative online learning platform, focusing on intuitive interfaces, accessibility, and seamless user journeys across devices.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
   },
