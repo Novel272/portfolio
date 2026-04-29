@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@heroui/react": "^2.8.9",
-    "@react-three/drei": "^9.113.0",
-    "@react-three/fiber": "^8.16.8",
+    "@react-three/drei": "^10.0.0-alpha.1",
+    "@react-three/fiber": "^9.0.0-alpha.8",
     "@sentry/nextjs": "^10.43.0",
     "@tabler/icons-react": "^3.37.1",
     "autoprefixer": "^10.4.24",

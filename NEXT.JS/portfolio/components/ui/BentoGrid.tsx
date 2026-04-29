@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-import dynamic from "next/dynamic";
+import Lottie from "lottie-react";
 
 import { cn } from "@/lib/utils";
 
@@ -11,11 +11,6 @@ import Image from "next/image";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
-
-// Dynamically import Lottie with SSR disabled to fix React 19 compatibility issues
-const Lottie = dynamic(() => import("react-lottie"), {
-  ssr: false,
-});
 
 export const BentoGrid = ({
   className,
@@ -59,15 +54,6 @@ export const BentoGridItem = ({
   const rightLists = ["Next.JS", "Three.js", "Motion"];
 
   const [copied, setCopied] = useState(false);
-
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
 
   const handleCopy = async () => {
     try {
@@ -175,7 +161,12 @@ export const BentoGridItem = ({
               <div
                 className={`absolute -bottom-5 right-0 ${copied ? "block" : "hidden"}`}
               >
-                <Lottie options={defaultOptions} height={200} width={400} />
+                <Lottie 
+                  animationData={animationData} 
+                  loop={copied} 
+                  autoplay={copied} 
+                  style={{ height: 200, width: 400 }}
+                />
               </div>
 
               <MagicButton
