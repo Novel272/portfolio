@@ -1,9 +1,17 @@
-/// <reference types="@react-three/fiber" />
 "use client";
 import { cn } from "@/lib/utils";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, useFrame, useThree, ThreeElements } from "@react-three/fiber";
 import React, { useMemo, useRef } from "react";
 import * as THREE from "three";
+
+// Force TypeScript to recognize R3F elements in React 19
+declare global {
+  namespace React {
+    namespace JSX {
+      interface IntrinsicElements extends ThreeElements {}
+    }
+  }
+}
 
 export const CanvasRevealEffect = ({
   animationSpeed = 0.4,
