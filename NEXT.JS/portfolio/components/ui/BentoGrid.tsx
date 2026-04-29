@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
 
 import { cn } from "@/lib/utils";
 
@@ -11,6 +11,11 @@ import Image from "next/image";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
+
+// Dynamically import Lottie with SSR disabled to fix React 19 compatibility issues
+const Lottie = dynamic(() => import("react-lottie"), {
+  ssr: false,
+});
 
 export const BentoGrid = ({
   className,
