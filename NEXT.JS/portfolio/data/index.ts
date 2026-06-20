@@ -94,7 +94,7 @@ export const projects = [
     iconLists: [
       "/node.svg",
       "/mongodb.svg",
-      "/js.svg",
+      "/JS.svg",
       "/express.svg",
       "/tail.svg",
     ],
