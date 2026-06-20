@@ -86,6 +86,20 @@ export const projects = [
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/re.svg"],
     link: "https://devevents-3kyarl86z-mohamed-al-mustafa-kamals-projects.vercel.app/",
   },
+  {
+    id: 3,
+    title: "Spiral Sounds",
+    des: "Full-stack e-commerce application integrating MongoDB Atlas with Express.js backend. Implemented secure authentication and persistent session management using connect-mongo and bcrypt, with a scalable RESTful API featuring Mongoose schema validation for product filtering and seamless checkout operations.",
+    img: "/account.jpg",
+    iconLists: [
+      "/node.svg",
+      "/mongodb.svg",
+      "/js.svg",
+      "/express.svg",
+      "/tail.svg",
+    ],
+    link: "https://spiral-sounds-app.onrender.com/",
+  },
 ];
 
 export const testimonials = [
