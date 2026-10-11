@@ -32,6 +32,7 @@ const workSpaceLayout = async ({ children, params }: Props) => {
               name={data?.name as string}
               email={data.email as string}
               image={data?.image as string}
+              
             />*/}
           </div>
           <div className="p-0 md:p-4 pt-2">{children}</div>
